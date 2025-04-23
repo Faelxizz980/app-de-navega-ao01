@@ -8,7 +8,7 @@ import Contatos from './components/contatos/contatos';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Chat />
+    <Contatos/>
       <StatusBar style="auto" />
     </View>
   );
