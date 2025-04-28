@@ -6,7 +6,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import Contatos from './components/contatos/contatos';
-import Ligações from './components/Ligações/ligações';
+import Ligacoes from './components/Ligações/ligações';
 
 const Tab = createBottomTabNavigator();
 
@@ -35,15 +35,9 @@ export default function App() {
                 })}
             >
                 <Tab.Screen name='Contatos' component={Contatos} />
-                <Tab.Screen name="Ligações" component={Ligações} />
+                <Tab.Screen name="Ligações" component={Ligacoes} />
             </Tab.Navigator>
             <StatusBar style="auto" />
         </NavigationContainer>
     );
 }
-
-module.exports = {
-  presets: ['module:metro-react-native-babel-preset'],
-  plugins: ['react-native-reanimated/plugin'], // Adicione esta linha
-};
-

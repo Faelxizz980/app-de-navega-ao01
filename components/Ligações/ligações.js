@@ -8,7 +8,7 @@ import Gekko from '../../img/gekko.jpg';
 import Omen  from '../../img/omen.jpg';
 import Tejo from '../../img/tejo.jpg';
 import { ScrollView } from "react-native-web";
-export default function App() {
+export default function Ligacoes() {
     return (
         <View style={styles.Container}>
             <ScrollView>

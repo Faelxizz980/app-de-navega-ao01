@@ -9,7 +9,7 @@ import Tejo from '../../img/tejo.jpg';
 import Icon from "react-native-vector-icons/Ionicons";
 import { ScrollView } from "react-native-web";
 
-export default function App() {
+export default function Contatos() {
     return (
         <View style={styles.container}>
             <ScrollView>
