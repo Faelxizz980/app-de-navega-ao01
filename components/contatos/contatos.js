@@ -2,15 +2,22 @@ import React  from "react";
 import { StyleSheet, Text, View, TextInput,Image } from "react-native";
 import clove from  '../../img/clove.jpg';
 import jett from '../../img/jett.jpg';
+import Raze from '../../img/raze.jpg';
+import Gekko from '../../img/gekko.jpg';
+import Omen  from '../../img/omen.jpg';
+import Tejo from '../../img/tejo.jpg';
 import Icon from "react-native-vector-icons/Ionicons";
+import { ScrollView } from "react-native-web";
 
 export default function App() {
     return (
         <View style={styles.container}>
+            <ScrollView>
             <View style ={styles.Menu} >
                 <Text style={styles.titulo}>Converse </Text>
                 <TextInput style={styles.search} placeholder="Pesquisar" />
             </View>
+            
             <View style = {styles.perfil}>
                 <Image source={clove} style={styles.contactImage} />
                 <Text style={styles.nomeContato}>clove</Text>
@@ -21,6 +28,28 @@ export default function App() {
                 <Text style={styles.nomeContato}>Jett</Text>
                 <Text style={styles.conversas}> <Icon name="checkmark-done-outline" style = {styles.visu}></Icon> Jett: Salve careca preta</Text>
             </View>
+            <View style = {styles.perfil}>
+                <Image source={Raze} style={styles.contactImage} />
+                <Text style={styles.nomeContato}>Raze</Text>
+                <Text style={styles.conversas}> <Icon name="checkmark-done-outline" style = {styles.visu}></Icon> Você: Salve estalinho</Text>
+            </View>
+            <View style = {styles.perfil}>
+                <Image source={Gekko} style={styles.contactImage} />
+                <Text style={styles.nomeContato}>Gekko</Text>
+                <Text style={styles.conversas}> <Icon name="checkmark-done-outline" style = {styles.visu}></Icon> Gekko: não vou te emprestar o Wingman</Text>
+            </View>
+            <View style = {styles.perfil}>
+                <Image source={Omen} style={styles.contactImage} />
+                <Text style={styles.nomeContato}>Omen</Text>
+                <Text style={styles.conversas}> <Icon name="checkmark-done-outline" style = {styles.visu}></Icon> Omen: Consegue me ajudar?</Text>
+            </View>
+            <View style = {styles.perfil}>
+                <Image source={Tejo} style={styles.contactImage} />
+                <Text style={styles.nomeContato}>Tejo</Text>
+                <Text style={styles.conversas}> <Icon name="checkmark-done-outline" style = {styles.visu}></Icon> Tejo: Vamos jogar damas</Text>
+            </View>
+           
+            </ScrollView>
         </View>
     );
   
