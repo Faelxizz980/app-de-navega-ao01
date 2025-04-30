@@ -1,10 +1,11 @@
 import React  from "react";
-import { StyleSheet, Text, View, TextInput,Image } from "react-native";
+import { StyleSheet, Text, View, TextInput,Image, TouchableOpacity } from "react-native";
 import clove from  '../../img/clove.jpg';
 import jett from '../../img/jett.jpg';
 import Icon from "react-native-vector-icons/Ionicons";
 
-export default function App() {
+export default function App({props}) {
+
     return (
         <View style={styles.container}>
             <View style ={styles.Menu} >
@@ -16,11 +17,15 @@ export default function App() {
                 <Text style={styles.nomeContato}>clove</Text>
                 <Text style={styles.conversas}> <Icon name="checkmark-done-outline" style = {styles.visu}></Icon> Você: vem cair no meu fiozinho</Text>
             </View>
-            <View style = {styles.perfil}>
-                <Image source={jett} style={styles.contactImage} />
-                <Text style={styles.nomeContato}>Jett</Text>
-                <Text style={styles.conversas}> <Icon name="checkmark-done-outline" style = {styles.visu}></Icon> Jett: Salve careca preta</Text>
-            </View>
+            <TouchableOpacity onPress={() => props.navigation.navigate('Jett')}>
+                <View style={styles.perfil}>
+                    <Image source={jett} style={styles.contactImage} />
+                    <Text style={styles.nomeContato}>Jett</Text>
+                    <Text style={styles.conversas}>
+                        <Icon name="checkmark-done-outline" style={styles.visu}></Icon> Jett: Salve careca preta
+                    </Text>
+                </View>
+            </TouchableOpacity>
         </View>
     );
   

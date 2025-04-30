@@ -5,9 +5,8 @@ import cypher from '../../img/cypher.jpg';
 import giphySticker from '../../img/giphy.gif';
 import Icon from "react-native-vector-icons/Ionicons";
 
-export default function App() {
-    const [message, setMessage] = useState(""); // Estado para capturar a mensagem
-
+export default function App({props}) {
+    
     return (
         <ImageBackground source={cypher} style={styles.wallpaper}>
             <KeyboardAvoidingView
