@@ -4,20 +4,21 @@ import clove from  '../../img/clove.jpg';
 import jett from '../../img/jett.jpg';
 import Icon from "react-native-vector-icons/Ionicons";
 
-export default function App({props}) {
-
+export default function Contatos({ navigation }) { // Substituí props por navigation
     return (
         <View style={styles.container}>
-            <View style ={styles.Menu} >
+            <View style={styles.Menu}>
                 <Text style={styles.titulo}>Converse </Text>
                 <TextInput style={styles.search} placeholder="Pesquisar" />
             </View>
-            <View style = {styles.perfil}>
+            <View style={styles.perfil}>
                 <Image source={clove} style={styles.contactImage} />
                 <Text style={styles.nomeContato}>clove</Text>
-                <Text style={styles.conversas}> <Icon name="checkmark-done-outline" style = {styles.visu}></Icon> Você: vem cair no meu fiozinho</Text>
+                <Text style={styles.conversas}>
+                    <Icon name="checkmark-done-outline" style={styles.visu}></Icon> Você: vem cair no meu fiozinho
+                </Text>
             </View>
-            <TouchableOpacity onPress={() => props.navigation.navigate('Jett')}>
+            <TouchableOpacity onPress={() => navigation.navigate('Chat')}>
                 <View style={styles.perfil}>
                     <Image source={jett} style={styles.contactImage} />
                     <Text style={styles.nomeContato}>Jett</Text>
@@ -28,7 +29,6 @@ export default function App({props}) {
             </TouchableOpacity>
         </View>
     );
-  
 }
 
 const styles = StyleSheet.create({

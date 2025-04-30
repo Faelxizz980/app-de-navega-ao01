@@ -5,8 +5,9 @@ import cypher from '../../img/cypher.jpg';
 import giphySticker from '../../img/giphy.gif';
 import Icon from "react-native-vector-icons/Ionicons";
 
-export default function App({props}) {
-    
+export default function Chat({ navigation }) { // Recebe o objeto navigation
+    const [message, setMessage] = useState(""); // Estado para capturar a mensagem
+
     return (
         <ImageBackground source={cypher} style={styles.wallpaper}>
             <KeyboardAvoidingView
@@ -15,7 +16,10 @@ export default function App({props}) {
             >
                 <View style={styles.container}>
                     <View style={styles.menu}>
-                        <Icon name="arrow-back-outline" style={styles.iconVoltar} />
+                        {/* Botão de voltar */}
+                        <TouchableOpacity onPress={() => navigation.goBack()}>
+                            <Icon name="arrow-back-outline" style={styles.iconVoltar} />
+                        </TouchableOpacity>
                         <Image source={jett} style={styles.fotoPerfil} />
                         <Text style={styles.nome}>Jett</Text>
                         <Icon name="videocam-outline" style={styles.iconsMenu}></Icon>

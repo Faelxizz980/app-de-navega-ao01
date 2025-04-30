@@ -9,9 +9,9 @@ const Stack = createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Chat">
-        <Stack.Screen name="Chat" component={Chat} />
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Contatos" component={Contatos} />
+        <Stack.Screen name="Chat" component={Chat} />
       </Stack.Navigator>
     </NavigationContainer>
   );
